@@ -1,0 +1,26 @@
+<div class="container">
+  <div ng-controller="StudentsCtrl">
+    <h2>Enter your Name</h2>
+    <form ng-submit="StudentsFactory.signIn()" class="form-inline" role="form">
+      <div class="form-group">
+        <input type="text" ng-model="StudentsFactory.studentName" class="form-control" id="student-name" placeholder="Enter name">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+  <div ng-controller="SignInCtrl">
+    <div ng-show="notSignedIn.length">
+      <h3>Not Signed In</h3>
+      <ul ng-repeat="item in notSignedIn = (list | filter: { signedIn: false })">
+        {{item.name}} <a ng-click="signStudentIn(item)"><button class='btn btn-primary'>Sign In</button></a>
+      </ul>
+    </div>
+    <div ng-show="studentsSignedIn.length">
+      <h3>Signed In</h3>
+      <ul ng-repeat="item in studentsSignedIn = (list | filter:{signedIn: true})">
+        {{item.name}}<a ng-click='signStudentOut(item)'><button class='btn btn-warning'>Sign Out</button></a>
+      </ul>
+    </div>
+    <a ui-sref='whoishere'><button class='btn btn-primary'>Who Is here?</button></a>
+  </div>
+</div>

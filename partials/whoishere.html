@@ -1,0 +1,17 @@
+<div class="container">
+<div ng-controller="SignInCtrl">
+  <div ng-show="notSignedIn.length">
+    <h3>Not Signed In</h3>
+    <ul ng-repeat="item in notSignedIn = (list | filter: { signedIn: false })">
+      {{item.name}}
+    </ul>
+  </div>
+  <div ng-show="studentsSignedIn.length">
+    <h3>Signed In</h3>
+    <ul ng-repeat="item in studentsSignedIn = (list | filter:{signedIn: true})">
+      {{item.name}}
+    </ul>
+  </div>
+  <a ui-sref='home'><button class='btn btn-primary'>Go Back</button></a>
+</div>
+</div>
