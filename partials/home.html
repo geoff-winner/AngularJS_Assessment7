@@ -12,15 +12,17 @@
     <div ng-show="notSignedIn.length">
       <h3>Not Signed In</h3>
       <ul ng-repeat="item in notSignedIn = (list | filter: { signedIn: false })">
-        {{item.name}} <a ng-click="signStudentIn(item)"><button class='btn btn-primary'>Sign In</button></a>
+        <h5>{{item.name}}</h5> <a ng-click="signStudentIn(item)"><button class='btn btn-primary'>Sign In</button></a>
       </ul>
     </div>
     <div ng-show="studentsSignedIn.length">
       <h3>Signed In</h3>
       <ul ng-repeat="item in studentsSignedIn = (list | filter:{signedIn: true})">
-        {{item.name}}<a ng-click='signStudentOut(item)'><button class='btn btn-warning'>Sign Out</button></a>
+        <h5>{{item.name}}</h5><a ng-click='signStudentOut(item)'><button class='btn btn-warning'>Sign Out</button></a>
       </ul>
     </div>
-    <a ui-sref='whoishere'><button class='btn btn-primary'>Who Is here?</button></a>
+    <div class='footer'>
+      <a ui-sref='whoishere'><button class='btn btn-primary'>Who Is here?</button></a>
+    </div>
   </div>
 </div>
