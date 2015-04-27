@@ -8,7 +8,7 @@ April 24, 2015<br />
 ###Description
 SignIn is a simple application used to keep a record of people that have signed in to any event.
 
-###Copyright (c) 2015 Marc Lee
+###Copyright (c) 2015 Geoff Winner
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
