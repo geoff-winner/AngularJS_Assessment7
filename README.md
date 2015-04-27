@@ -5,7 +5,6 @@ Geoff Winner
 April 24, 2015<br />
 
 ###Description
-###Description
 SignIn is a simple application used to keep a record of people that have signed in to any event.
 
 ###Copyright (c) 2015 Geoff Winner
